@@ -6,11 +6,25 @@ import Container from './components/Container';
 
 
 function physicalHealth(state = 100, action) {
-  return state;
+  switch (action.type) {
+    case 'SLIP_BANANA':
+      return state - 10;
+    case 'WIN_LOTTERY':
+      return state + 10;
+    default:
+      return state;
+  }
 }
 
 function mentalHealth(state = 100, action) {
-  return state;
+  switch (action.type) {
+    case 'SCREW_UP_TEST':
+      return state - 20;
+    case 'WIN_LOTTERY':
+      return state + 20;
+    default:
+      return state;
+  }
 }
 
 const combinedState = combineReducers(
