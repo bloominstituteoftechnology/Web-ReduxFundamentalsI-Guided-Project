@@ -33,7 +33,9 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
+    "polished": "^3.0.0",
     "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react-dom": "^16.8.0",
+    "styled-components": "^4.1.3"
   }
 }
