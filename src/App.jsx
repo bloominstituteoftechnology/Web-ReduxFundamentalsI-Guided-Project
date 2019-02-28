@@ -28,7 +28,7 @@ function mentalHealth(state = 100, action) {
 }
 
 const combinedState = combineReducers(
-  { physicalHealth, mentalHealth },
+  { stats: combineReducers({ physicalHealth, mentalHealth }) },
 );
 
 const store = createStore(
