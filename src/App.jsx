@@ -7,7 +7,7 @@ import Container from './components/Container';
 
 function physicalHealth(state = 100, action) {
   switch (action.type) {
-    case 'SLIP_BANANA':
+    case 'SLIP_ON_BANANA_PEEL':
       return state - 10;
     case 'WIN_LOTTERY':
       return state + 10;
@@ -18,7 +18,7 @@ function physicalHealth(state = 100, action) {
 
 function mentalHealth(state = 100, action) {
   switch (action.type) {
-    case 'SCREW_UP_TEST':
+    case 'WATCH_THE_NEWS':
       return state - 20;
     case 'WIN_LOTTERY':
       return state + 20;

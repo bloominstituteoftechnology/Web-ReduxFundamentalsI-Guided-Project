@@ -8,15 +8,15 @@ export class Person extends React.Component {
   //   physicalHealth: 100,
   // }
 
-  slipOnBanana = () => {
-    this.props.dispatch({ type: 'SLIP_BANANA' });
+  slipOnBananaPeel = () => {
+    this.props.dispatch({ type: 'SLIP_ON_BANANA_PEEL' });
     // this.setState(st => ({
     //   physicalHealth: st.physicalHealth - 10,
     // }));
   }
 
-  screwUpTest = () => {
-    this.props.dispatch({ type: 'SCREW_UP_TEST' });
+  watchTheNews = () => {
+    this.props.dispatch({ type: 'WATCH_THE_NEWS' });
     // this.setState(st => ({
     //   mentalHealth: st.mentalHealth - 20,
     // }));
@@ -36,8 +36,8 @@ export class Person extends React.Component {
         <div>physical health: {this.props.physicalHealth}</div>
         <div>mental health: {this.props.mentalHealth}</div>
 
-        <button onClick={this.slipOnBanana}>Slip on banana</button>
-        <button onClick={this.screwUpTest}>Screw up test</button>
+        <button onClick={this.slipOnBananaPeel}>Slip on banana</button>
+        <button onClick={this.watchTheNews}>Screw up test</button>
         <button onClick={this.winLottery}>Win Lottery</button>
       </div>
     );
