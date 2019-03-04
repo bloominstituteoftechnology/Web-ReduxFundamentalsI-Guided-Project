@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 // ACTION CREATORS (should probably live on their own file)
-
+// DO NOT USE THEM DIRECTLY!!! THEY MUST BE MAPPED TO PROPS
+// USING A mapDispatchToProps FUNCTION !!!
 // returns an action with a type
 const slipOnBananaPeel = () => ({
   type: 'SLIP_ON_BANANA_PEEL',
