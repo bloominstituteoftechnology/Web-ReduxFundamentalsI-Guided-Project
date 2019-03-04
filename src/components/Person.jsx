@@ -22,6 +22,7 @@ export class Person extends React.Component {
         <div>physical health: {this.props.physicalHealth}</div>
         <div>mental health: {this.props.mentalHealth}</div>
         {/* children would get slices of state, and methods to change state */}
+
         <button onClick={this.props.slipOnBananaPeel}>Slip on banana peel</button>
         <button onClick={this.props.watchTheNews}>Watch the news</button>
         <button onClick={this.props.winTheLottery}>Win the Lottery</button>
@@ -30,12 +31,12 @@ export class Person extends React.Component {
   }
 }
 
-// function mapStateToProps(state) {
-//   return {
-//     physicalHealth: state.physicalHealth,
-//     mentalHealth: state.mentalHealth,
-//   };
-// }
+function mapStateToProps(state) {
+  return {
+    physicalHealth: state.physicalHealth,
+    mentalHealth: state.mentalHealth,
+  };
+}
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
@@ -45,4 +46,4 @@ function mapDispatchToProps(dispatch) {
   }, dispatch);
 }
 
-export default connect(st => st, mapDispatchToProps)(Person);
+export default connect(mapStateToProps, mapDispatchToProps)(Person);
