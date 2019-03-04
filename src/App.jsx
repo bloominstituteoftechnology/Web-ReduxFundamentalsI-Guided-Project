@@ -14,7 +14,7 @@ function combinedState() {
 
 // 2- let's actually make that state object
 const store = createStore(
-  combinedState,
+  combinedState, // becomes a function that takes state object, and a yell, and returns new state
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 
