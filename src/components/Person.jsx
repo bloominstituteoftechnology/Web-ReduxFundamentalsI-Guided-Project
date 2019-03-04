@@ -39,7 +39,7 @@ export class Person extends React.Component {
 }
 
 // Want to alias the slice of state?
-// Want to plug some calculation before handing the data into the component?
+// Want to plug some calculation before handing the data to the component?
 // Do it here!
 function mapStateToProps(state) {
   return {
