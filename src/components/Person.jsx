@@ -50,8 +50,8 @@ function mapStateToProps(state) {
 
 // Here we "plug" the action creators
 // So redux knows about them, and so they are available
-// from props, without us having
-// to use this.props.dispatch within the component
+// from props, and helps us avoid having
+// to use "this.props.dispatch" within the component
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     slipOnBananaPeel,
