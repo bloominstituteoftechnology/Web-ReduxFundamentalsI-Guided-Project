@@ -32,11 +32,19 @@ export class Person extends React.Component {
   }
 }
 
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    slipOnBananaPeel,
+    watchTheNews,
+    winTheLottery,
+  }, dispatch);
+}
+
 function mapStateToProps(state) {
   return {
-    physicalHealthZ: state.physicalHealth,
+    physicalHealth: state.physicalHealth,
     mentalHealth: state.mentalHealth,
   };
 }
 
-export default connect(mapStateToProps)(Person);
+export default connect(mapStateToProps, mapDispatchToProps)(Person);
