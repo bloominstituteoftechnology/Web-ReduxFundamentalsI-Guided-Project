@@ -30,6 +30,13 @@ export class Person extends React.Component {
   }
 }
 
+// function mapStateToProps(state) {
+//   return {
+//     physicalHealth: state.physicalHealth,
+//     mentalHealth: state.mentalHealth,
+//   };
+// }
+
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     slipOnBananaPeel,
@@ -38,11 +45,4 @@ function mapDispatchToProps(dispatch) {
   }, dispatch);
 }
 
-function mapStateToProps(state) {
-  return {
-    physicalHealth: state.physicalHealth,
-    mentalHealth: state.mentalHealth,
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Person);
+export default connect(st => st, mapDispatchToProps)(Person);
