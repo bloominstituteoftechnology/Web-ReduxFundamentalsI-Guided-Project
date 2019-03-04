@@ -6,30 +6,19 @@ import { bindActionCreators } from 'redux';
 export class Person extends React.Component {
   slipOnBananaPeel = () => {
     this.props.dispatch({ type: 'SLIP_ON_BANANA_PEEL' });
-
-    // this.setState(st => ({
-    //   physicalHealth: st.physicalHealth - 20,
-    // }));
   }
 
   watchTheNews = () => {
     this.props.dispatch({ type: 'WATCH_THE_NEWS' });
-
-    // this.setState(st => ({
-    //   mentalHealth: st.mentalHealth - 20,
-    // }));
   }
 
   winTheLottery = () => {
     this.props.dispatch({ type: 'WIN_THE_LOTTERY' });
-
-    // this.setState(st => ({
-    //   mentalHealth: st.mentalHealth + 30,
-    //   physicalHealth: st.physicalHealth + 10,
-    // }));
   }
 
   render() {
+    console.log(this.props);
+
     return (
       <div>
         <div>physical health: {this.props.physicalHealth}</div>
