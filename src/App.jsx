@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import Container from './components/Container';
 
 // 1- function that returns state
-const combinedState = combineReducers({ mentalHealth, physicalHealth });
+const rootReducer = combineReducers({ mentalHealth, physicalHealth });
 
 function mentalHealth(state = 100, action) {
   switch (action.type) {
@@ -31,7 +31,7 @@ function physicalHealth(state = 100, action) {
 
 // 2- let's actually make that state object
 const store = createStore(
-  combinedState, // becomes a function that takes state object, and a yell, and returns new state
+  rootReducer, // becomes a function that takes state object, and a yell, and returns new state
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 

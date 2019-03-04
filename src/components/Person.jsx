@@ -1,14 +1,9 @@
 import React from 'react';
-// import { connect } from 'react-redux';
-// import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 
-export default class Person extends React.Component {
-  state = {
-    mentalHealth: 100,
-    physicalHealth: 100,
-  }
-
+export class Person extends React.Component {
   slipOnBananaPeel = () => {
     this.props.dispatch({ type: 'SLIP_ON_BANANA_PEEL' });
 
@@ -47,3 +42,5 @@ export default class Person extends React.Component {
     );
   }
 }
+
+export default connect(st => st)(Person);
