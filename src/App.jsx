@@ -23,7 +23,7 @@ function physicalHealth(state = 100, action) {
     case 'SLIP_ON_BANANA_PEEL':
       return state - 20;
     case 'WIN_THE_LOTTERY':
-      return state + 10;
+      return state + action.howMuch;
     default:
       return state;
   }

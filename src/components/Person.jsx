@@ -11,8 +11,9 @@ const watchTheNews = () => ({
   type: 'WATCH_THE_NEWS',
 });
 
-const winTheLottery = () => ({
+const winTheLottery = howMuch => ({
   type: 'WIN_THE_LOTTERY',
+  howMuch,
 });
 
 export class Person extends React.Component {
@@ -25,7 +26,7 @@ export class Person extends React.Component {
 
         <button onClick={this.props.slipOnBananaPeel}>Slip on banana peel</button>
         <button onClick={this.props.watchTheNews}>Watch the news</button>
-        <button onClick={this.props.winTheLottery}>Win the Lottery</button>
+        <button onClick={() => this.props.winTheLottery(15)}>Win the Lottery</button>
       </div>
     );
   }
