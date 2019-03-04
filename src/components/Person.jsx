@@ -17,16 +17,14 @@ const winTheLottery = () => ({
 
 export class Person extends React.Component {
   render() {
-    console.log(this.props);
-
     return (
       <div>
         <div>physical health: {this.props.physicalHealth}</div>
         <div>mental health: {this.props.mentalHealth}</div>
         {/* children would get slices of state, and methods to change state */}
-        <button onClick={this.slipOnBananaPeel}>Slip on banana peel</button>
-        <button onClick={this.watchTheNews}>Watch the news</button>
-        <button onClick={this.winTheLottery}>Win the Lottery</button>
+        <button onClick={this.props.slipOnBananaPeel}>Slip on banana peel</button>
+        <button onClick={this.props.watchTheNews}>Watch the news</button>
+        <button onClick={this.props.winTheLottery}>Win the Lottery</button>
       </div>
     );
   }
