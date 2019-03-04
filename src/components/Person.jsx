@@ -21,7 +21,7 @@ const winTheLottery = howMuch => ({
 });
 
 // Person can assume all slices of state and all action creators
-// come from props.
+// come from props. The non-connected Person is totally reusable (can also be used without redux).
 export class Person extends React.Component {
   render() {
     return (
