@@ -60,7 +60,7 @@ function mapDispatchToProps(dispatch) {
   }, dispatch);
 }
 
-// connect returns a HOC, which in turn returs a component "enriched"
+// connect returns a HOC, which in turn returs a given component "enriched"
 // with the props selected in mapStateToProps, and the action creators
 // selected in mapDispatchToProps
 export default connect(mapStateToProps, mapDispatchToProps)(Person);
