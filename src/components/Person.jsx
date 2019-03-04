@@ -3,19 +3,19 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 
+const slipOnBananaPeel = () => ({
+  type: 'SLIP_ON_BANANA_PEEL',
+});
+
+const watchTheNews = () => ({
+  type: 'WATCH_THE_NEWS',
+});
+
+const winTheLottery = () => ({
+  type: 'WIN_THE_LOTTERY',
+});
+
 export class Person extends React.Component {
-  slipOnBananaPeel = () => {
-    this.props.dispatch({ type: 'SLIP_ON_BANANA_PEEL' });
-  }
-
-  watchTheNews = () => {
-    this.props.dispatch({ type: 'WATCH_THE_NEWS' });
-  }
-
-  winTheLottery = () => {
-    this.props.dispatch({ type: 'WIN_THE_LOTTERY' });
-  }
-
   render() {
     console.log(this.props);
 
@@ -32,4 +32,11 @@ export class Person extends React.Component {
   }
 }
 
-export default connect(st => st)(Person);
+function mapStateToProps(state) {
+  return {
+    physicalHealthZ: state.physicalHealth,
+    mentalHealth: state.mentalHealth,
+  };
+}
+
+export default connect(mapStateToProps)(Person);
