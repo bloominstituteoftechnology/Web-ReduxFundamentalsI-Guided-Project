@@ -9,15 +9,34 @@ export default class Person extends React.Component {
     physicalHealth: 100,
   }
 
+  slipOnBananaPeel = () => {
+    this.setState(st => ({
+      physicalHealth: st.physicalHealth - 20,
+    }));
+  }
+
+  watchTheNews = () => {
+    this.setState(st => ({
+      mentalHealth: st.mentalHealth - 20,
+    }));
+  }
+
+  winTheLottery = () => {
+    this.setState(st => ({
+      mentalHealth: st.mentalHealth + 30,
+      physicalHealth: st.physicalHealth + 10,
+    }));
+  }
+
   render() {
     return (
       <div>
         <div>physical health: {this.state.physicalHealth}</div>
         <div>mental health: {this.state.mentalHealth}</div>
 
-        <button>Slip on banana peel</button>
-        <button>Watch the news</button>
-        <button>Win the Lottery</button>
+        <button onClick={this.slipOnBananaPeel}>Slip on banana peel</button>
+        <button onClick={this.watchTheNews}>Watch the news</button>
+        <button onClick={this.winTheLottery}>Win the Lottery</button>
       </div>
     );
   }
