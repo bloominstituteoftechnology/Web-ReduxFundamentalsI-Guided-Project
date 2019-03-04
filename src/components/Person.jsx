@@ -4,10 +4,10 @@ import React from 'react';
 
 
 export default class Person extends React.Component {
-  // state = {
-  //   mentalHealth: 100,
-  //   physicalHealth: 100,
-  // }
+  state = {
+    mentalHealth: 100,
+    physicalHealth: 100,
+  }
 
   slipOnBananaPeel = () => {
     this.props.dispatch({ type: 'SLIP_ON_BANANA_PEEL' });

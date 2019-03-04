@@ -1,16 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { createStore, combineReducers } from 'redux';
-// import { Provider } from 'react-redux';
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
 import Container from './components/Container';
 
+// 1- function that returns state
+function combinedState() {
+  return {
+    mentalHealthGaga: 100,
+    physicalHealthGaga: 100,
+  };
+}
 
-// const store = createStore(
-//   combinedState,
-//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-// );
+// 2- let's actually make that state object
+const store = createStore(
+  combinedState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
+// 3- we need to wrap container in a provider
 ReactDOM.render(
-  <Container />,
+  <Provider store={store}>
+    <Container />
+  </Provider>,
   document.querySelector('#target'),
 );
