@@ -2,20 +2,26 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+// ACTION CREATORS (should probably live on their own file)
 
+// returns an action with a type
 const slipOnBananaPeel = () => ({
   type: 'SLIP_ON_BANANA_PEEL',
 });
 
+// returns an action with a type
 const watchTheNews = () => ({
   type: 'WATCH_THE_NEWS',
 });
 
+// returns an action with a type and howMuch
 const winTheLottery = howMuch => ({
   type: 'WIN_THE_LOTTERY',
   howMuch,
 });
 
+// Person can assume all slices of state and all action creators
+// come from props.
 export class Person extends React.Component {
   render() {
     return (
@@ -32,6 +38,9 @@ export class Person extends React.Component {
   }
 }
 
+// Want to alias the slice of state?
+// Want to plug some calculation before handing the data into the component?
+// Do it here!
 function mapStateToProps(state) {
   return {
     physicalHealth: state.physicalHealth,
@@ -39,6 +48,10 @@ function mapStateToProps(state) {
   };
 }
 
+// Here we "plug" the action creators
+// So redux knows about them, and so they are available
+// from props, without us having
+// to use this.props.dispatch within the component
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     slipOnBananaPeel,
@@ -47,4 +60,7 @@ function mapDispatchToProps(dispatch) {
   }, dispatch);
 }
 
+// connect returns a HOC, which in turn returs a component "enriched"
+// with the props selected in mapStateToProps, and the action creators
+// selected in mapDispatchToProps
 export default connect(mapStateToProps, mapDispatchToProps)(Person);
