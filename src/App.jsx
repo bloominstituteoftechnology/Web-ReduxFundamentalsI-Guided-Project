@@ -4,6 +4,7 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import Container from './components/Container';
 
+
 // The return value of combineReducers
 // is a monster function that takes old state and an action,
 // and returns new state.
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({ mentalHealth, physicalHealth });
 // Reducing function
 // Takes old slice of state and an action,
 // and returns the new slice of state.
+// This function probably lives in its own file.
 function mentalHealth(state = 100, action) {
   switch (action.type) {
     case 'WATCH_THE_NEWS':
@@ -26,6 +28,7 @@ function mentalHealth(state = 100, action) {
 // Reducing function
 // Takes old slice of state and an action,
 // and returns the new slice of state.
+// This function probably lives in its own file.
 function physicalHealth(state = 100, action) {
   switch (action.type) {
     case 'SLIP_ON_BANANA_PEEL':
