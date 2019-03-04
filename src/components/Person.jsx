@@ -14,7 +14,7 @@ const watchTheNews = () => ({
   type: 'WATCH_THE_NEWS',
 });
 
-// returns an action with a type and howMuch
+// returns an action with a type and a payload
 const winTheLottery = howMuch => ({
   type: 'WIN_THE_LOTTERY',
   howMuch,
