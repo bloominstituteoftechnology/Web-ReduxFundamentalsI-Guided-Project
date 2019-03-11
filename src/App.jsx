@@ -4,9 +4,21 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import Container from './components/Container';
 
-const WATCH_NEWS = 'WATCH_NEWS';
-const WIN_LOTTERY = 'WIN_LOTTERY';
-const SLIP_ON_BANANA = 'SLIP_ON_BANANA';
+export const WATCH_NEWS = 'WATCH_NEWS';
+export const WIN_LOTTERY = 'WIN_LOTTERY';
+export const SLIP_ON_BANANA = 'SLIP_ON_BANANA';
+
+export const slipOnBanana = () => {
+
+};
+
+export const watchTheNews = () => {
+
+};
+
+export const winTheLottery = () => {
+
+};
 
 const appState = combineReducers({ mentalHealth, physicalHealth });
 
