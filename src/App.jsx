@@ -9,15 +9,21 @@ export const WIN_LOTTERY = 'WIN_LOTTERY';
 export const SLIP_ON_BANANA = 'SLIP_ON_BANANA';
 
 export const slipOnBanana = () => {
-
+  return {
+    type: SLIP_ON_BANANA,
+  };
 };
 
 export const watchTheNews = () => {
-
+  return {
+    type: WATCH_NEWS,
+  };
 };
 
 export const winTheLottery = () => {
-
+  return {
+    type: WIN_LOTTERY,
+  };
 };
 
 const appState = combineReducers({ mentalHealth, physicalHealth });
