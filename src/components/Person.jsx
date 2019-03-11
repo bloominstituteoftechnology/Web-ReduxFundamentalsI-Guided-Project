@@ -1,6 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actionCreators';
 
-export default class Person extends React.Component {
+
+export class Person extends React.Component {
   render() {
     return (
       <div>
@@ -22,3 +25,5 @@ export default class Person extends React.Component {
     );
   }
 }
+
+export default connect(state => state, actions)(Person);
