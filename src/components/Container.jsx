@@ -9,15 +9,24 @@ export default class Container extends React.Component {
   }
 
   slipOnBanana = () => {
-    console.log('slip on banana');
+    this.setState(
+      st => ({ physicalHealth: st.physicalHealth - 20 }),
+    );
   }
 
   watchTheNews = () => {
-    console.log('watching the news');
+    this.setState(
+      st => ({ mentalHealth: st.mentalHealth - 20 }),
+    );
   }
 
   winTheLottery = () => {
-    console.log('winning the lottery');
+    this.setState(
+      st => ({
+        mentalHealth: st.mentalHealth + 30,
+        physicalHealth: st.physicalHealth + 10,
+      }),
+    );
   }
 
   render() {
