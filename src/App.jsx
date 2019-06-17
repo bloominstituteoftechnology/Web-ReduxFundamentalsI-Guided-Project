@@ -80,7 +80,7 @@ ReactDOM.render(
   document.querySelector('#target'),
 );
 
-// STEP 9 EXPOSE THE ACTION FUNCTIONS TO THE UNIVERSE
+// STEP 9 EXPOSE THE ACTION CREATORS TO THE UNIVERSE
 export function slipOnBanana() {
   return { type: SLIP_ON_BANANA };
 }
