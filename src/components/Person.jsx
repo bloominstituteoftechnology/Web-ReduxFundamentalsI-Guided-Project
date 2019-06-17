@@ -1,20 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { SLIP_ON_BANANA, WATCH_THE_NEWS, WIN_LOTTERY } from '../App';
 // import { bindActionCreators } from 'redux';
 
 // DISPATCH is a prop "connected" components get
 // and allows to dispatch "actions" that might trigger a state change
 class Person extends React.Component {
   slipOnBanana = () => {
-    this.props.dispatch({ type: 'SLIP_ON_BANANA' });
+    this.props.dispatch({ type: SLIP_ON_BANANA });
   }
 
   watchNews = () => {
-    this.props.dispatch({ type: 'WATCH_THE_NEWS' });
+    this.props.dispatch({ type: WATCH_THE_NEWS });
   }
 
   winLottery = () => {
-    this.props.dispatch({ type: 'WIN_LOTTERY' });
+    this.props.dispatch({ type: WIN_LOTTERY });
   }
 
   render() {
