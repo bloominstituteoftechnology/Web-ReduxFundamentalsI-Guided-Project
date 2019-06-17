@@ -26,22 +26,22 @@ function mentalHealthReducer(slice = 100, action) {
     return slice;
   }
   if (action.type === WATCH_THE_NEWS) {
-
+    return slice - 30;
   }
   if (action.type === WIN_LOTTERY) {
-
+    return slice + 50;
   }
 }
 
-function physicalHealthReducer(slice = 150) {
+function physicalHealthReducer(slice = 150, action) {
   if (action.type === SLIP_ON_BANANA) {
-
+    return slice - 30;
   }
   if (action.type === WATCH_THE_NEWS) {
-
+    return slice;
   }
   if (action.type === WIN_LOTTERY) {
-
+    return slice + 20;
   }
 }
 
