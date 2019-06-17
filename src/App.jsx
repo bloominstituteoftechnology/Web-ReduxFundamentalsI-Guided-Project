@@ -16,8 +16,8 @@ export const ADD_FRIEND = 'ADD_FRIEND';
 // import { SLIP_ON_BANANA } from './actionTypes'; // from someplace else
 // import * as actionTypes from './actionTypes'; // from someplace else
 
-// STEP 3 --> create ONE function per SLICE of state (2)
-// explaining how each of those 3 action types affect the given slice
+// STEP 3 --> create ONE REDUCER function per SLICE of state (3)
+// explaining how each of those 4 action types affect the given slice
 
 // - takes slice of state (with a default/initial)
 // - takes an action (with a type property)
