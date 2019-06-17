@@ -22,6 +22,7 @@ class Person extends React.Component {
 
 // STEP 7: WE NEED TO DEFAULT EXPORT THE "CONNECTED" VERSION
 // when we invoke connect WE GET A HOC BACK
+// STEP 8: LET'S CREATE REUSABLE FUNCTION FOR SLIPPING ON BANANA ETC
 export default connect(
   // map state to props (use state => state if too confusing)
   state => ({
@@ -31,5 +32,3 @@ export default connect(
   // an object with the action functions imported from app
   { slipOnBanana, watchNews, winLottery },
 )(Person);
-
-// STEP 8: LET'S CREATE REUSABLE FUNCTION FOR SLIPPING ON BANANA ETC
