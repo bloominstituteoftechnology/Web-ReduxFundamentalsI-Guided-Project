@@ -25,13 +25,13 @@ class Person extends React.Component {
 // when we invoke connect WE GET A HOC BACK
 // STEP 8: LET'S CREATE REUSABLE FUNCTION FOR SLIPPING ON BANANA ETC
 export default connect(
-  // map state to props (use `state => state` if too confusing)
+  // first arg to connect: map state to props (use `state => state` if too confusing)
   state => ({
     // on the left of the colon goes the desired name for the prop
     // on the right, the slice we are going to map to that prop
     mentalHealth: state.mentalHealth,
     physicalHealth: state.physicalHealth,
   }),
-  // an object with the action creators imported from app
+  // second arg to connect: an object with the action creators imported from app
   { slipOnBanana, watchNews, winLottery, addFriend },
 )(Person);
