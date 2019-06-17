@@ -67,9 +67,8 @@ const combinedReducer = combineReducers({
 });
 
 // STEP 5 CREATE THE REDUX STORE!!!!!!!!!
-
 const store = createStore(
-  combinedReducer,
+  combinedReducer, // IS THE RESULT OF USING combineReducers
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 
