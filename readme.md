@@ -28,5 +28,5 @@ We need `node` & `npm`. VSCode's `eslint` extension is recommended. Command line
   * Refactor `Person` to delete local state and `this.setState` logic.
   * Connect the `Person` component to have access to the store.
   * Refactor `Person` to dispatch `SLIP_ON_BANANA` etc using `this.props.dispatch`.
-  * Refactor `Person` to use mapDispatchToProps.
+  * Refactor `Person` to use pre-defined action creators.
   * Explain `mapStateToProps`.
