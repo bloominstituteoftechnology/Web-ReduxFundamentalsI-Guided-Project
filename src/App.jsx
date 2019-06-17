@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers } from 'redux';
 // import { Provider } from 'react-redux';
 import Container from './components/Container';
 
@@ -59,10 +59,19 @@ const friendsReducer = (slice = [], action) => {
 //   return slice;
 // }
 
-// const store = createStore(
-//   combinedState,
-//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-// );
+// STEP 4 COMBINE THOSE REDUCERS INTO ONE REDUCER
+const combinedReducer = combineReducers({
+  mentalHealth: mentalHealthReducer,
+  physicalHealth: physicalHealthReducer,
+  friends: friendsReducer,
+});
+
+// STEP 5 CREATE THE REDUX STORE!!!!!!!!!
+
+const store = createStore(
+  combinedReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
 ReactDOM.render(
   <Container />,
