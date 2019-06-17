@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, combineReducers } from 'redux';
-// import { Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 import Container from './components/Container';
 
 // STEP 1 --> find out what the state of the app should look like
@@ -72,7 +72,10 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 
+// STEP 6 INJECT THE STORE INTO THE APP
 ReactDOM.render(
-  <Container />,
+  <Provider store={store}>
+    <Container />
+  </Provider>,
   document.querySelector('#target'),
 );
