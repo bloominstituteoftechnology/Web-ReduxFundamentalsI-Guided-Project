@@ -92,3 +92,7 @@ export function winLottery() {
 export function watchNews() {
   return { type: WATCH_THE_NEWS };
 }
+
+export function addFriend(newFriend) {
+  return { type: ADD_FRIEND, payload: newFriend };
+}

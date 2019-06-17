@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { slipOnBanana, watchNews, winLottery } from '../App';
+import { slipOnBanana, watchNews, winLottery, addFriend } from '../App';
 // import { bindActionCreators } from 'redux';
 
 // DISPATCH is a prop "connected" components get
@@ -15,6 +15,7 @@ class Person extends React.Component {
         <button onClick={this.props.slipOnBanana}>Slip on banana peel</button>
         <button onClick={this.props.watchNews}>Watch the news</button>
         <button onClick={this.props.winLottery}>Win the Lottery</button>
+        <button onClick={() => this.props.addFriend('Jakub')}>add friend</button>
       </div>
     );
   }
@@ -30,5 +31,5 @@ export default connect(
     physicalHealth: state.physicalHealth,
   }),
   // an object with the action functions imported from app
-  { slipOnBanana, watchNews, winLottery },
+  { slipOnBanana, watchNews, winLottery, addFriend },
 )(Person);
