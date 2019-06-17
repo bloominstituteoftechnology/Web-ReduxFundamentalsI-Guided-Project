@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { slipOnBanana, watchNews, winLottery, addFriend } from '../App';
-// import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux'; // alternative means for plugging in the action creators
 
 // DISPATCH is a prop "connected" components get
 // and allows to dispatch "actions" that might trigger a state change
