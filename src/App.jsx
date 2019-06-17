@@ -18,10 +18,12 @@ export const WIN_LOTTERY = 'WIN_LOTTERY';
 // STEP 3 --> create ONE function per SLICE of state (2)
 // explaining how each of those 3 action types affect the given slice
 
-// takes slice of state (with a default/initial)
+// - takes slice of state (with a default/initial)
+// - takes an action (with a type property)
+// - RETURNS NEW STATE (SLICE) depending on the type of action
 function mentalHealthReducer(slice = 100, action) {
   if (action.type === SLIP_ON_BANANA) {
-
+    return slice;
   }
   if (action.type === WATCH_THE_NEWS) {
 
