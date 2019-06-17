@@ -30,6 +30,6 @@ export default connect(
     mentalHealth: state.mentalHealth,
     physicalHealth: state.physicalHealth,
   }),
-  // an object with the action functions imported from app
+  // an object with the action creators imported from app
   { slipOnBanana, watchNews, winLottery, addFriend },
 )(Person);
