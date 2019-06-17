@@ -31,7 +31,7 @@ function mentalHealthReducer(slice = 100, action) {
   }
 }
 
-function physicalHealthReducer() {
+function physicalHealthReducer(slice = 150) {
   if (action.type === SLIP_ON_BANANA) {
 
   }
