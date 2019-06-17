@@ -5,13 +5,14 @@ import ReactDOM from 'react-dom';
 import Container from './components/Container';
 
 // STEP 1 --> find out what the state of the app should look like
-// { mentalHealth, physicalHealth }
+// { mentalHealth, physicalHealth, friends }
 
 // STEP 2 --> think of the actions that might happen to alter these slices
 // and save them as constants (these are STRINGS we'll be using often)
 export const SLIP_ON_BANANA = 'SLIP_ON_BANANA';
 export const WATCH_THE_NEWS = 'WATCH_THE_NEWS';
 export const WIN_LOTTERY = 'WIN_LOTTERY';
+export const ADD_FRIEND = 'ADD_FRIEND';
 // import { SLIP_ON_BANANA } from './actionTypes'; // from someplace else
 // import * as actionTypes from './actionTypes'; // from someplace else
 
@@ -40,6 +41,23 @@ function physicalHealthReducer(slice = 150, action) {
   }
   return slice;
 }
+
+// THE NEW FRIEND OBJECT COMES INSIDE OF action.payload
+const friendsReducer = (slice = [], action) => {
+  switch (action.type) {
+    case ADD_FRIEND:
+      return [...slice, action.payload];
+    default:
+      return slice;
+  }
+};
+
+// function friendsReducer(slice = [], action) {
+//   if (action.type === ADD_FRIEND) {
+//     return slice.concat(action.payload)
+//   }
+//   return slice;
+// }
 
 // const store = createStore(
 //   combinedState,
