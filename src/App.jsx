@@ -22,27 +22,23 @@ export const WIN_LOTTERY = 'WIN_LOTTERY';
 // - takes an action (with a type property)
 // - RETURNS NEW STATE (SLICE) depending on the type of action
 function mentalHealthReducer(slice = 100, action) {
-  if (action.type === SLIP_ON_BANANA) {
-    return slice;
-  }
   if (action.type === WATCH_THE_NEWS) {
     return slice - 30;
   }
   if (action.type === WIN_LOTTERY) {
     return slice + 50;
   }
+  return slice;
 }
 
 function physicalHealthReducer(slice = 150, action) {
   if (action.type === SLIP_ON_BANANA) {
     return slice - 30;
   }
-  if (action.type === WATCH_THE_NEWS) {
-    return slice;
-  }
   if (action.type === WIN_LOTTERY) {
     return slice + 20;
   }
+  return slice;
 }
 
 // const store = createStore(
