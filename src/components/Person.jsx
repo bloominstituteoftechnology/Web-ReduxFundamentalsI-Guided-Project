@@ -24,7 +24,7 @@ class Person extends React.Component {
 // when we invoke connect WE GET A HOC BACK
 // STEP 8: LET'S CREATE REUSABLE FUNCTION FOR SLIPPING ON BANANA ETC
 export default connect(
-  // map state to props (use state => state if too confusing)
+  // map state to props (use `state => state` if too confusing)
   state => ({
     mentalHealth: state.mentalHealth,
     physicalHealth: state.physicalHealth,

@@ -79,3 +79,16 @@ ReactDOM.render(
   </Provider>,
   document.querySelector('#target'),
 );
+
+// STEP 9 EXPOSE THE ACTION FUNCTIONS TO THE UNIVERSE
+export function slipOnBanana() {
+  return { type: SLIP_ON_BANANA };
+}
+
+export function winLottery() {
+  return { type: WIN_LOTTERY };
+}
+
+export function watchNews() {
+  return { type: WATCH_THE_NEWS };
+}
