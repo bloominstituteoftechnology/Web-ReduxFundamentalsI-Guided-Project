@@ -17,12 +17,30 @@ export const WIN_LOTTERY = 'WIN_LOTTERY';
 
 // STEP 3 --> create ONE function per SLICE of state (2)
 // explaining how each of those 3 action types affect the given slice
-function mentalHealthReducer() {
-  
+
+// takes slice of state (with a default/initial)
+function mentalHealthReducer(slice = 100, action) {
+  if (action.type === SLIP_ON_BANANA) {
+
+  }
+  if (action.type === WATCH_THE_NEWS) {
+
+  }
+  if (action.type === WIN_LOTTERY) {
+
+  }
 }
 
 function physicalHealthReducer() {
+  if (action.type === SLIP_ON_BANANA) {
 
+  }
+  if (action.type === WATCH_THE_NEWS) {
+
+  }
+  if (action.type === WIN_LOTTERY) {
+
+  }
 }
 
 // const store = createStore(
