@@ -7,7 +7,7 @@ import Container from './components/Container';
 // STEP 1 --> find out what the state of the app should look like
 // { mentalHealth, physicalHealth, friends }
 
-// STEP 2 --> think of the actions that might happen to alter these slices
+// STEP 2 --> think of the action types that might happen to alter these slices
 // and save them as constants (these are STRINGS we'll be using often)
 export const SLIP_ON_BANANA = 'SLIP_ON_BANANA';
 export const WATCH_THE_NEWS = 'WATCH_THE_NEWS';
