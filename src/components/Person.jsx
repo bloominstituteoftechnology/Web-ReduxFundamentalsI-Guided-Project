@@ -35,7 +35,11 @@ class Person extends React.Component {
 // STEP 7: WE NEED TO DEFAULT EXPORT THE "CONNECTED" VERSION
 // when we invoke connect WE GET A HOC BACK
 export default connect(
-  state => state, // first arg is something that filters out the slices we don't need FUNCTION
+  // map state to props
+  state => ({
+    mentalHealth: state.mentalHealth,
+    physicalHealth: state.physicalHealth,
+  }),
 )(Person);
 
 // STEP 8: LET'S CREATE REUSABLE FUNCTION FOR SLIPPING ON BANANA ETC
