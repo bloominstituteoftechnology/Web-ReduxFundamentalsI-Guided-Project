@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 // and allows to dispatch "actions" that might trigger a state change
 class Person extends React.Component {
   slipOnBanana = () => {
-    this.props.dispatch({ type: 'SLIP_ON_BANANA' });
+    this.props.dispatch({ type: 'SLIP_ON_BANANA' }); // SCREAMS "slip !!!!!"
   }
 
   render() {
