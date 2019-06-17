@@ -6,7 +6,15 @@ import { connect } from 'react-redux';
 // and allows to dispatch "actions" that might trigger a state change
 class Person extends React.Component {
   slipOnBanana = () => {
-    this.props.dispatch({ type: 'SLIP_ON_BANANA' }); // SCREAMS "slip !!!!!"
+    this.props.dispatch({ type: 'SLIP_ON_BANANA' });
+  }
+
+  watchNews = () => {
+    this.props.dispatch({ type: 'WATCH_THE_NEWS' });
+  }
+
+  winLottery = () => {
+    this.props.dispatch({ type: 'WIN_LOTTERY' });
   }
 
   render() {
@@ -16,8 +24,8 @@ class Person extends React.Component {
         <div>mental health: {this.props.mentalHealth}</div>
 
         <button onClick={this.slipOnBanana}>Slip on banana peel</button>
-        <button>Watch the news</button>
-        <button>Win the Lottery</button>
+        <button onClick={this.watchNews}>Watch the news</button>
+        <button onClick={this.winLottery}>Win the Lottery</button>
       </div>
     );
   }
